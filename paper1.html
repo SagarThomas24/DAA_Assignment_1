@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximal Cliques</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #8b0000);
+            color: white;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 4px 4px 15px rgba(255, 0, 0, 0.5);
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 4px 4px 15px rgba(255, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        li {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+        .output-table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .output-table th,
+        .output-table td {
+            border: 1px solid #8b0000;
+            padding: 8px;
+            text-align: center;
+        }
+        .output-table th {
+            background-color: #8b0000;
+            color: white;
+            font-weight: bold;
+        }
+        .output-table tr:nth-child(odd) {
+            background-color: #1a1a1a;
+        }
+        .output-table tr:nth-child(even) {
+            background-color: #2a0a0a;
+        }
+        .output-table tr:hover {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .back-btn {
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #ff0000, #8b0000);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background: linear-gradient(135deg, #ff4d4d, #b30000);
+            box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.3);
+        }
+        img {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1 class="main-title">Listing All Maximal Cliques in Sparse Graphs in Near-optimal Time</h1>
+        <div class="section">
+            <h2 class="section-title">Summary</h2>
+            <p>The paper "Arboricity and Subgraph Listing Algorithms" by Norishige Chiba and Takao Nishizeki (1985) introduces an efficient edge-searching strategy for listing subgraphs such as triangles, quadrangles, complete subgraphs, and cliques...</p>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Pseudocode</h2>
+            <img src="1st.png" alt="Pseudocode">
+        </div>
+        <div class="section">
+            <h2 class="section-title">Observation</h2>
+            <table class="output-table">
+                <thead>
+                    <tr>
+                        <th>Metrics</th>
+                        <th>Enron Email Dataset</th>
+                        <th>Wiki-Vote Dataset</th>
+                        <th>Skitter Dataset</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Largest Clique Size</td>
+                        <td>20</td>
+                        <td>17</td>
+                        <td>67</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Cliques</td>
+                        <td>did not run stopped at 1000 cliques</td>
+                        <td>did not run stopped at 1000 cliques</td>
+                        <td>did not run stopped at 1000 cliques</td>
+                    </tr>
+                    <tr>
+                        <td>Execution Time (ms)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="section">
+            <h2 class="section-title">Time Complexity</h2>
+            <p>The time complexity results from the Chiba and Nishizeki (1985) paper on arboricity and subgraph listing algorithms are:</p>
+            <ul>
+                <li><strong>Triangle Listing:</strong> O(α(G) ⋅ m)</li>
+                <li><strong>Quadrangle (C4) Listing:</strong> O(α(G) ⋅ m)</li>
+                <li><strong>Complete Subgraph Kt Listing:</strong> O(α(G)^(t-2) ⋅ m)</li>
+                <li><strong>Clique Listing:</strong> O(α(G) ⋅ m) per clique.</li>
+            </ul>
+        </div>
+        
+        <button onclick="window.location.href='index.html'" class="back-btn">Go Back</button>
+    </div>
+</body>
+</html>
