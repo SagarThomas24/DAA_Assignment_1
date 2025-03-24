@@ -94,7 +94,18 @@
         <h1 class="main-title">Listing All Maximal Cliques in Sparse Graphs in Near-optimal Time</h1>
         <div class="section">
             <h2 class="section-title">Summary</h2>
-            <p>The paper "Arboricity and Subgraph Listing Algorithms" by Norishige Chiba and Takao Nishizeki (1985) introduces an efficient edge-searching strategy for listing subgraphs such as triangles, quadrangles, complete subgraphs, and cliques...</p>
+<p className = "summary">
+        The paper "Arboricity and Subgraph Listing Algorithms" by Norishige Chiba and Takao Nishizeki (1985) introduces 
+        an efficient edge-searching strategy for listing subgraphs such as triangles, quadrangles, complete subgraphs, 
+        and cliques. The key innovation is the use of arboricity α(G)\alpha(G)α(G) as a parameter to improve the time 
+        complexity of subgraph listing algorithms.
+        </p>
+        <p>
+        Arboricity α(G)\alpha(G) is defined as the minimum number of edge-disjoint spanning forests required 
+        to cover all edges of a graph. The authors establish that their algorithms run in O(α(G)m)O(\alpha(G) m)O(α(G)m) 
+        time, where m is the number of edges in the graph. Since α(G)\alpha(G) is often much smaller than n (the number of 
+        vertices), this leads to significant performance improvements.
+        </p>        
         </div>
         <div class="section">
             <h2 class="section-title">Pseudocode</h2>
